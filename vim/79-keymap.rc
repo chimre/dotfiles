@@ -1,0 +1,126 @@
+" vim: set ft=vim :
+scriptencoding utf-8
+
+let mapleader = "\<Space>"
+
+" nnoremap  normal
+" inoremap  insert
+" cnoremap  command
+" vnoremap  visual
+" noremap   normal + visual
+" noremap!  insert + command
+
+" find
+nnoremap <Leader>fb :FzfBuffers<CR>
+nnoremap <Leader>ff :FzfFiles<CR>
+nnoremap <Leader>fg :FzfGitFiles<CR>
+nnoremap <Leader>fG :FzfGitFiles?<CR>
+nnoremap <Leader>fl :FzfLines<CR>
+nnoremap <Leader>fr :FzfRg<CR>
+
+" misc
+nnoremap <Leader>mc :%s/\s\+$//ge<CR>
+nnoremap <Leader>mp :silent execute('! explorer ' . g:vim_config)<CR>
+nnoremap <Leader>mu :silent execute('! del ' . g:package_update_deny)<CR>
+nnoremap <Leader>mw :set wrap! wrap?<CR>
+
+" object
+nnoremap <Leader>oe :silent ! explorer %:p:h:gs!/!\\!<CR>
+nnoremap <Leader>ov :Vaffle %:p:h:gs!/!\\!<CR>
+nnoremap <Leader>ow :w<CR>
+nnoremap <Leader>oq :q<CR>
+
+" window
+nnoremap <Leader>wh :vsplit<CR><C-W>h
+nnoremap <Leader>wj :split<CR><C-W>j
+nnoremap <Leader>wk :split<CR><C-W>k
+nnoremap <Leader>wl :vsplit<CR><C-W>l
+nnoremap <Leader>ww :close<CR>
+
+" easymotion
+nmap <Leader>ee <Plug>(easymotion-overwin-f2)
+nmap <Leader>eE <Plug>(easymotion-overwin-f)
+map <Leader>ej <Plug>(easymotion-j)
+map <Leader>ek <Plug>(easymotion-k)
+
+" complete
+inoremap <expr> <TAB> pumvisible() ? "\<C-N>" : "\<Tab>"
+inoremap <expr> <CR> pumvisible() ? "\<C-Y>\<CR>" : "\<CR>"
+
+" concat
+nnoremap gY gJ
+nnoremap Y J
+
+" cursor
+noremap H 0
+noremap J }
+noremap K {
+noremap L $
+noremap gj j
+noremap gk k
+noremap j gj
+noremap k gk
+
+" focus
+nnoremap wh <C-w>h
+nnoremap wj <C-W>j
+nnoremap wk <C-W>k
+nnoremap wl <C-w>l
+
+" buffer
+function! s:delete_buffer()
+  if getbufvar(bufnr('%'), '&modified')
+    return
+  endif
+
+  let l:buffer_num = 0
+
+  for nr in range(1, bufnr('$'))
+    if buflisted(nr)
+      let l:buffer_num += 1
+    endif
+  endfor
+
+  if l:buffer_num < 2
+    enew
+  else
+    bnext
+  endif
+
+  bdelete #
+endfunction
+
+command BD call s:delete_buffer()
+
+nnoremap bd :BD<CR>
+nnoremap bb :ls<CR>:b 
+nnoremap bj :bnext<CR>
+nnoremap bk :bprevious<CR>
+
+" indent
+vnoremap < <gv
+vnoremap > >gv
+
+" misc
+inoremap <ESC> <ESC>
+inoremap jj <Esc>
+nnoremap aa :%y<CR>
+
+" register
+noremap t "_d
+noremap s v"_s
+vnoremap s "_s
+noremap x "_x
+inoremap <M-p> <C-r>*
+vnoremap <M-p> "_s<C-r>*<ESC>
+
+" search
+nnoremap <ESC><ESC> :nohlsearch<CR>
+nnoremap / /\v
+nnoremap ? /
+nnoremap <C-n> :cn<CR>
+nnoremap <C-p> :cp<CR>
+
+" selection
+nnoremap vv <C-v>
+
