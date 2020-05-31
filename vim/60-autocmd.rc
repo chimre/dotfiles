@@ -1,0 +1,18 @@
+" vim: set ft=vim :
+scriptencoding utf-8
+
+" initialize
+augroup MyAutoCmd
+  autocmd!
+augroup END
+
+" vanilla
+autocmd MyAutoCmd FileType * set formatoptions-=ro
+autocmd MyAutoCmd FileType * syntax sync fromstart
+autocmd MyAutoCmd BufEnter * if expand('%') == '' | lcd $HOME | else | lcd %:p:h | endif
+autocmd MyAutoCmd BufEnter * if expand('%') == '' | setlocal buftype=nofile | setlocal bufhidden=hide | setlocal noswapfile | endif
+autocmd MyAutoCmd BufEnter * if &filetype != '' && filereadable(g:vim_ftplugin . '\' . &filetype . '.vim') == 1 | call execute('source ' . g:vim_ftplugin . '\' . &filetype . '.vim') | endif
+" autocmd MyAutoCmd BufWritePre * %s/\s\+$//ge
+autocmd MyAutoCmd QuickFixCmdPost * set nowrap
+autocmd MyAutoCmd QuickfixCmdPost * cwindow
+

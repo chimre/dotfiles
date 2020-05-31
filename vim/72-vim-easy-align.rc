@@ -1,0 +1,5 @@
+" vim: set ft=vim :
+scriptencoding utf-8
+
+vmap <Enter> <Plug>(EasyAlign)
+

@@ -1,0 +1,80 @@
+" vim: set ft=vim :
+scriptencoding utf-8
+
+" clipboard
+set clipboard=unnamed
+"set guioptions=+a
+
+" tab
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+
+" shell
+set shell=cmd
+"set shell=/bin/bash
+"set shellcmdflag=-e
+"set shellpipe=>
+"set shellredir=>%s\ 2>&1
+"set shellxquote=\"
+
+" search
+set ignorecase
+set incsearch
+set smartcase
+set wrapscan
+
+" complete
+set wildmenu
+set wildmode=list:longest
+set completeopt=menuone,preview
+for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
+  exec "imap <expr> " . k . " pumvisible() ? '" . k . "' : '" . k . "\<C-X>\<C-P>\<C-N>'"
+endfor
+
+" grep
+if executable('rg')
+  set grepprg=rg\ --vimgrep\ --no-heading
+  set grepformat=%f:%l:%c:%m,%f:%l:%m
+else
+  set grepprg=internal
+endif
+
+" indent
+"set autoindent
+"set smartindent
+
+" cursor
+set whichwrap=b,s,h,l,<,>,[,],~
+" set ambiwidth=double
+set guicursor=
+
+" misc
+set backspace=indent,eol,start
+set fileformats=unix,dos,mac
+"set formatoptions+=jmM
+set formatoptions-=ro
+set hidden
+set modeline
+set nrformats=""
+set diffopt=internal,filler,algorithm:histogram,indent-heuristic
+
+" ime
+set iminsert=0
+set imsearch=-1
+
+" backup
+set nobackup
+set nowritebackup
+
+" control files
+set noswapfile
+set noundofile
+set viminfo=
+
+" bell
+set noerrorbells
+set novisualbell
+set t_vb=
+
