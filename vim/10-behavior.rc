@@ -1,6 +1,14 @@
 " vim: set ft=vim :
 scriptencoding utf-8
 
+" encode
+set encoding=utf-8
+set fileencodings=utf-8
+set fileformats=unix,dos,mac
+
+" lang
+lang en_US.UTF-8
+
 " clipboard
 set clipboard=unnamed
 "set guioptions=+a
