@@ -24,9 +24,15 @@ nnoremap <Leader>mp :silent execute('! explorer ' . g:vim_config)<CR>
 nnoremap <Leader>mu :silent execute('! del ' . g:package_update_deny)<CR>
 nnoremap <Leader>mw :set wrap! wrap?<CR>
 
+" terminal
+nnoremap <Leader>tt :split<CR><C-W>j<CR>:T cd %:p:h<CR>i<CR>
+nnoremap <Leader>ti :split<CR><C-W>j<CR>:T cd %:p:h && python<CR>i<CR>
+nnoremap <Leader>tp :split<CR><C-W>j<CR>:T cd %:p:h && python %:p<CR>i<CR>
+tnoremap <Leader>ww <C-\><C-n><C-w>
+
 " object
-nnoremap <Leader>oe :silent ! explorer %:p:h:gs!/!\\!<CR>
-nnoremap <Leader>ov :Vaffle %:p:h:gs!/!\\!<CR>
+nnoremap <Leader>oe :silent ! explorer .<CR>
+nnoremap <Leader>ov :Fern . -drawer -stay -keep -toggle -reveal=% -width=40<CR>
 nnoremap <Leader>ow :w<CR>
 nnoremap <Leader>oq :q<CR>
 
@@ -35,7 +41,7 @@ nnoremap <Leader>wh :vsplit<CR><C-W>h
 nnoremap <Leader>wj :split<CR><C-W>j
 nnoremap <Leader>wk :split<CR><C-W>k
 nnoremap <Leader>wl :vsplit<CR><C-W>l
-nnoremap <Leader>ww :close<CR>
+nnoremap <Leader>wc :close<CR>
 
 " easymotion
 nmap <Leader>ee <Plug>(easymotion-overwin-f2)

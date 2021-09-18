@@ -1,6 +1,6 @@
 scriptencoding utf-8
 set encoding=utf-8
-set shellslash
+" set shellslash
 
 let g:home = $HOME
 let g:home_cache = $HOME_CACHE

@@ -63,13 +63,15 @@ call s:update_install_package(s:command_git, 'https://github.com/junegunn/vim-ea
 call s:update_install_package(s:command_git, 'https://github.com/morhetz/gruvbox', 1, s:updatable)
 call s:update_install_package(s:command_git, 'https://github.com/luochen1990/rainbow', 1, s:updatable)
 call s:update_install_package(s:command_git, 'https://github.com/easymotion/vim-easymotion', 1, s:updatable)
-call s:update_install_package(s:command_git, 'https://github.com/cocopon/vaffle.vim', 1, s:updatable)
+call s:update_install_package(s:command_git, 'https://github.com/lambdalisue/fern.vim', 1, s:updatable)
 call s:update_install_package(s:command_git, 'https://github.com/airblade/vim-gitgutter', 1, s:updatable)
 call s:update_install_package(s:command_git, 'https://github.com/junegunn/fzf', 1, s:updatable)
 call s:update_install_package(s:command_git, 'https://github.com/junegunn/fzf.vim', 1, s:updatable)
 call s:update_install_package(s:command_git, 'https://github.com/Glench/Vim-Jinja2-Syntax', 1, s:updatable)
 call s:update_install_package(s:command_git, 'https://github.com/unblevable/quick-scope', 1, s:updatable)
 call s:update_install_package(s:command_git, 'https://github.com/Yggdroot/indentLine', 1, s:updatable)
+call s:update_install_package(s:command_git, 'https://github.com/kassio/neoterm', 1, s:updatable)
+call s:update_install_package(s:command_git, 'https://github.com/antoinemadec/FixCursorHold.nvim', 1, s:updatable)
 
 " teardown
 call execute('cd "' . s:current_directory . '"')

@@ -1,6 +1,6 @@
 " vim: set ft=vim :
 scriptencoding utf-8
 
-" set default current directory
-lcd $HOME
+" core
+let g:fern#default_hidden=1
 
