@@ -6,16 +6,12 @@ augroup MyAutoCmd
   autocmd!
   autocmd FileType * set formatoptions-=ro
   autocmd FileType * syntax sync fromstart
+  autocmd BufEnter * if expand('%') != '' && match(expand('%'), 'fern://') < 0 | call execute('lcd %:h') | endif
   autocmd BufEnter * if expand('%') == '' | setlocal buftype=nofile | setlocal bufhidden=hide | setlocal noswapfile | endif
   autocmd BufEnter * if &filetype != '' && filereadable(g:vim_ftplugin . '\' . &filetype . '.vim') == 1 | call execute('source ' . g:vim_ftplugin . '\' . &filetype . '.vim') | endif
   " autocmd BufWritePre * %s/\s\+$//ge
   autocmd QuickFixCmdPost * set nowrap
   autocmd QuickfixCmdPost * cwindow
-augroup END
-
-" Fern
-augroup MyFern
-  autocmd!
-  autocmd VimEnter * ++nested Fern . -drawer -stay -keep -toggle -reveal=% -width=40
+  autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()
 augroup END
 

@@ -32,7 +32,7 @@ tnoremap <Leader>ww <C-\><C-n><C-w>
 
 " object
 nnoremap <Leader>oe :silent ! explorer .<CR>
-nnoremap <Leader>ov :Fern . -drawer -stay -keep -toggle -reveal=% -width=40<CR>
+nnoremap <Leader>ov :Fern $HOME -drawer -stay -toggle -reveal=%:p -width=100<CR>
 nnoremap <Leader>ow :w<CR>
 nnoremap <Leader>oq :q<CR>
 
