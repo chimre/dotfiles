@@ -1,6 +1,0 @@
-" vim: set ft=vim :
-scriptencoding utf-8
-
-" set default current directory
-lcd $HOME
-
