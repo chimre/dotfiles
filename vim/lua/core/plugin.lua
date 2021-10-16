@@ -3,7 +3,7 @@ local helper = require('helper')
 local function make_resource(package, hosts, url, lazy)
   local resource = {}
 
-  for i, host in ipairs(hosts) do
+  for _, host in ipairs(hosts) do
     for holder, item in string.gmatch(url, host.pattern) do
       if lazy == true then
         resource.path = package.root .. '\\' .. package.lazy .. '\\' .. holder .. '___' .. item
@@ -14,7 +14,7 @@ local function make_resource(package, hosts, url, lazy)
       resource.update = host.update
       resource.url = url
       break
-    end  
+    end
   end
 
   return resource
@@ -48,8 +48,8 @@ M.install = function (plugins, force)
     end
   end
 
-  for i, plugin in ipairs(plugins) do
-    plugin_with_default = {url = '', lazy = false}
+  for _, plugin in ipairs(plugins) do
+    local plugin_with_default = {url = '', lazy = false}
     for k, v in pairs(plugin) do
       plugin_with_default[k] = v
     end

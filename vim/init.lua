@@ -1,12 +1,18 @@
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 require('core.path')
 require('core.basic')
 require('core.plugin').install({
   -- prerequisite
   {url = 'https://github.com/nvim-lua/plenary.nvim'},
+  {url = 'https://github.com/kyazdani42/nvim-web-devicons'},
   -- view
-  {url = 'https://github.com/savq/melange'},
+  {url = 'https://github.com/mhartington/oceanic-next'},
   {url = 'https://github.com/lukas-reineke/indent-blankline.nvim'},
   {url = 'https://github.com/airblade/vim-gitgutter'},
+  {url = 'https://github.com/hoob3rt/lualine.nvim'},
+  {url = 'https://github.com/folke/lsp-colors.nvim'},
   -- filer
   {url = 'https://github.com/ahmedkhalf/project.nvim'},
   -- formatter
