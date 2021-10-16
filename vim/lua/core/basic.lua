@@ -11,7 +11,8 @@ vim.api.nvim_set_option('modeline', true)
 
 vim.opt.display:append {'lastline'}
 
-vim.api.nvim_set_option('number', true)
+vim.wo.number = true
+vim.wo.numberwidth = 7
 
 vim.api.nvim_set_option('clipboard', 'unnamed')
 
