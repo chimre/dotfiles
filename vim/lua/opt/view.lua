@@ -18,7 +18,6 @@ require('gitsigns').setup {
   },
 }
 
---vim.opt.statusline = [[%r %<%F [%{&ff}] [%{(&fenc!=''?&fenc:&enc).(&bomb?':BOM':'')}] %y %m %= %l / %L (%3p%%)]]
 require'lualine'.setup {
   options = {
     icons_enabled = true,
