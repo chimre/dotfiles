@@ -78,8 +78,10 @@ vim.api.nvim_command('autocmd FileType * set formatoptions-=ro')
 vim.api.nvim_command('autocmd FileType * syntax sync fromstart')
 vim.api.nvim_command('autocmd QuickFixCmdPost * set nowrap')
 vim.api.nvim_command('autocmd QuickfixCmdPost * cwindow')
+vim.api.nvim_command('autocmd TermOpen * tnoremap <ESC> <C-\\><C-n>')
 vim.api.nvim_command('augroup END')
 
+vim.api.nvim_set_keymap('n', '<F1>', '<nop>', { noremap = false, silent = true })
+vim.api.nvim_set_keymap('i', '<F1>', '<nop>', { noremap = false, silent = true })
 vim.api.nvim_set_keymap('n', '<ESC><ESC>', ':nohlsearch<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('t', '<ESC><ESC>', [[<C-\><C-n><C-w>]], { noremap = true, silent = true })
 
