@@ -2,6 +2,8 @@ vim.g.mapleader = ' '
 
 vim.g.vimsyn_embed = 'lPr'
 
+vim.api.nvim_set_option('mouse', 'a')
+
 vim.api.nvim_command('noswapfile')
 vim.api.nvim_set_option('viminfo', '')
 
