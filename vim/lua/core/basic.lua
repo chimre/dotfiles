@@ -38,7 +38,7 @@ vim.api.nvim_set_option('fileformats', 'unix,dos,mac')
 vim.api.nvim_set_option('shell', 'pwsh.exe -NoLogo')
 vim.api.nvim_set_option('shellcmdflag', '-Command')
 --vim.api.nvim_set_option('shellquote', '\"')
---vim.api.nvim_set_option('shellxquote', '')
+vim.api.nvim_set_option('shellxquote', '')
 
 vim.api.nvim_set_option('ignorecase', true)
 vim.api.nvim_set_option('incsearch', true)
