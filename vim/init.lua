@@ -23,7 +23,6 @@ require('core.plugin').install({
   {url = 'https://github.com/lewis6991/gitsigns.nvim'},
   {url = 'https://github.com/hoob3rt/lualine.nvim'},
   {url = 'https://github.com/folke/lsp-colors.nvim'},
-  {url = 'https://github.com/folke/trouble.nvim'},
   -- finder
   {url = 'https://github.com/ahmedkhalf/project.nvim'},
   {url = 'https://github.com/nvim-telescope/telescope.nvim'},
