@@ -18,7 +18,6 @@ vim.api.nvim_set_option('clipboard', 'unnamed')
 
 vim.api.nvim_command('syntax enable')
 
-vim.api.nvim_command('filetype plugin indent on')
 vim.api.nvim_command('filetype plugin indent off')
 vim.api.nvim_set_option('expandtab', true)
 vim.api.nvim_set_option('shiftwidth', 2)
@@ -38,7 +37,7 @@ vim.api.nvim_set_option('fileformats', 'unix,dos,mac')
 vim.api.nvim_set_option('shell', 'pwsh.exe -NoLogo')
 vim.api.nvim_set_option('shellcmdflag', '-Command')
 --vim.api.nvim_set_option('shellquote', '\"')
---vim.api.nvim_set_option('shellxquote', '')
+vim.api.nvim_set_option('shellxquote', '')
 
 vim.api.nvim_set_option('ignorecase', true)
 vim.api.nvim_set_option('incsearch', true)

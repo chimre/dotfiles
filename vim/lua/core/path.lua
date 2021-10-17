@@ -14,9 +14,9 @@ if string.find(vim.api.nvim_get_option('packpath'), vim.g.vim_cache) == nil then
   vim.api.nvim_set_option('packpath', vim.api.nvim_get_option('packpath') .. ',' .. vim.g.vim_cache)
 end
 
-local stdout = helper.execute('powershell.exe -Command "(Get-Command python).Source"')
+local stdout = helper.execute([[powershell.exe -Command "(Get-Command python).Source"]])
 vim.g.python3_host_prog = stdout[#stdout]
 
-stdout = helper.execute('powershell.exe -Command "Join-Path (Split-Path (Get-Command neovim-node-host).Source -Parent) ""node_modules\\neovim\\bin\\cli.js"""')
+stdout = helper.execute([[powershell.exe -Command "Join-Path (Split-Path (Get-Command neovim-node-host).Source -Parent) ""node_modules\neovim\bin\cli.js"""]])
 vim.g.node_host_prog = stdout[#stdout]
 
