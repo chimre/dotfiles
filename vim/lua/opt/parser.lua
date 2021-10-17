@@ -1,3 +1,17 @@
+require('nvim-treesitter.configs').setup {
+  highlight = {
+    enable = true,
+    ensure_installed = "maintained",
+    additional_vim_regex_highlighting = false,
+    disable = {}
+  },
+  rainbow = {
+    enable = true,
+    extended_mode = true,
+    max_file_lines = nil,
+  }
+}
+
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 require('nvim-lsp-installer').on_server_ready(function(server)
