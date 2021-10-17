@@ -2,7 +2,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 require('core.path')
-require('core.basic')
+require('core.vanilla')
 require('core.plugin').install({
   -- prerequisite
   {url = 'https://github.com/nvim-lua/plenary.nvim'},
