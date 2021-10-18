@@ -3,7 +3,8 @@ vim.g.loaded_netrwPlugin = 1
 
 require('core.path')
 require('core.vanilla')
-require('core.plugin').install({
+local plugin = require('core.plugin')
+plugin.setup({
   -- prerequisite
   {url = 'https://github.com/nvim-lua/plenary.nvim'},
   {url = 'https://github.com/kyazdani42/nvim-web-devicons'},
@@ -26,7 +27,9 @@ require('core.plugin').install({
   -- finder
   {url = 'https://github.com/ahmedkhalf/project.nvim'},
   {url = 'https://github.com/nvim-telescope/telescope.nvim'},
-}, false)
+})
+plugin.install()
+--plugin.update()
 
 require('opt.parser')
 require('opt.formatter')
