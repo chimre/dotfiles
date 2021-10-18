@@ -3,9 +3,8 @@ vim.g.loaded_netrwPlugin = 1
 
 require('core.path')
 require('core.vanilla')
-local plugin = require('core.plugin')
-plugin.setup({
-  -- prerequisite
+require('core.plugin').setup({
+  -- prerequisites
   {url = 'https://github.com/nvim-lua/plenary.nvim'},
   {url = 'https://github.com/kyazdani42/nvim-web-devicons'},
   -- parser
@@ -28,8 +27,7 @@ plugin.setup({
   {url = 'https://github.com/ahmedkhalf/project.nvim'},
   {url = 'https://github.com/nvim-telescope/telescope.nvim'},
 })
-plugin.install()
---plugin.update()
+require('core.plugin').install()
 
 require('opt.parser')
 require('opt.formatter')
@@ -42,6 +40,7 @@ require('opt.keymap')
 :LspInstall pyright
 :LspInstall sumneko_lua
 :LspInstall vimls
+require('core.plugin').update()
 ]]
 
 vim.api.nvim_command('lcd $HOME')
