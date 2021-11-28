@@ -1,5 +1,7 @@
 {
     "vscode-neovim.neovimExecutablePaths.win32": "C:\\tools\\neovim\\Neovim\\bin\\nvim.exe",
     "vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\chimre\\.config\\nvim\\init.lua",
-    "editor.fontFamily": "HackGen, Consolas, 'Courier New', monospace"
+    "editor.fontFamily": "HackGen, Consolas, 'Courier New', monospace",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Gruvbox Dark Hard"
 }
