@@ -5,6 +5,5 @@
     "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "Gruvbox Dark Hard",
     "editor.bracketPairColorization.enabled": true,
-    "editor.guides.bracketPairs": "active",
-    "powershell.powerShellDefaultVersion": "pwsh.exe"
+    "editor.guides.bracketPairs": "active"
 }
