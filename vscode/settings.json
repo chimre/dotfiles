@@ -6,5 +6,6 @@
     "workbench.colorTheme": "Gruvbox Dark Hard",
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": "active",
-    "files.eol": "\n"
+    "files.eol": "\n",
+    "editor.tabSize": 2
 }
